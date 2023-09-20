@@ -52,12 +52,7 @@ const NavbarComp = () => {
                 >
                 InterestSelection
                 </Link>
-                <Link
-                  to="/feed"
-                  className="py-2 ps-3 pe-4 fw-semibold text-decoration-none"
-                >
-                  NewsFeed
-                </Link>
+               
                 <Link
                   to="/article-recommendations"
                   className="py-2 ps-3 pe-4 fw-semibold text-decoration-none"

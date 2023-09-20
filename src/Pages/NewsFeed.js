@@ -27,6 +27,8 @@ const NewsFeed = () => {
     api.get('/user/interests',{headers}).then((response) => {
       console.log(response.data)
       setUserInterests(response.data.newsArticles);
+    }).catch((error) => {
+      console.error('Error fetching article:', error);
     });
   }, []);
 
@@ -48,6 +50,8 @@ const NewsFeed = () => {
     };
     api.get(`/news-feed?interests=${userInterests.join(',')}`,{headers}).then((response) => {
       setNewsArticles(response.data);
+    }).catch((error) => {
+      console.error('Error fetching  article:', error);
     });
   }, [userInterests]);
   return (
